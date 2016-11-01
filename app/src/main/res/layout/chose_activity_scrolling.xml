@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.deer.manga.Chose.ChoseActivity"
+    android:background="@drawable/bg">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/transparent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                android:padding="10dp" />
+
+            <ImageView
+                android:id="@+id/cloud_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/cloud"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@android:color/background_light" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        android:foreground="@drawable/ic_logo"
+        android:background="@drawable/ic_logo"
+        app:backgroundTint="@color/fab_blue"
+        app:elevation="4dp"
+        app:rippleColor="@android:color/white"
+        app:layout_anchorGravity="bottom|end"
+        app:fabSize="normal" />
+
+    <TextView
+        android:text="開始閱讀"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/state_textView"
+        app:layout_anchor="@id/fab"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        android:textColor="?android:attr/colorEdgeEffect"
+        android:textStyle="bold"
+        android:textColorHighlight="@android:color/holo_blue_dark"
+        android:paddingTop="10dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chapterView"
+        tools:context="com.example.deer.manga.Chose.ChoseActivity"
+        tools:showIn="@layout/chose_activity_scrolling"
+        tools:ignore="PrivateResource"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom">
+    </FrameLayout>
+
+    <TextView
+        android:text="選單"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mu_a"
+        app:layout_anchor="@id/menu_button"
+        app:layout_anchorGravity="center"
+        android:textSize="12sp"
+        android:textColor="#a9a6af" />
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:srcCompat="@drawable/dia_black"
+        android:id="@+id/mu_b"
+        android:rotation="45"
+        app:layout_anchor="@+id/menu_button"
+        app:layout_anchorGravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp" />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:srcCompat="@drawable/dia_black"
+        android:id="@+id/mu_c"
+        android:rotation="45"
+        app:layout_anchor="@id/menu_button"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:layout_height="@dimen/menu_width"
+        android:id="@+id/menu_button"
+        android:background="@drawable/dia_shape"
+        android:textColor="@android:color/background_light"
+        android:elevation="4dp"
+        android:rotation="45.0"
+        android:layout_alignParentBottom="true"
+        android:layout_width="@dimen/menu_width"
+        app:layout_anchor="@+id/chapterView"
+        app:layout_anchorGravity="bottom|left"
+        android:gravity="bottom|left"
+        android:layout_margin="20dp" />
+
+    <!--不知道為什麼多個textview anchor menu_button 就爆了
+                開始出現覆蓋上面的fragment btn出現reference null現象
+                 額 真的完全不懂 刪除安裝 重裝之後就正常了-->
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#191c2e</color>
+    <color name="colorPrimaryDark">#333857</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="purple_normal">#ac82c2</color>
+    <color name="pink_normal">#ff82ad</color>
+    <color name="fab_blue">#ab33b5e5</color>
+    <color name="diacolor_p">#b372ffd2</color>
+    <color name="diacolor_r">#b3d572ff</color>
+    <color name="diacolor_s">#b3ffd072</color>
+    <color name="new_white">#bbffffff</color>
+</resources>

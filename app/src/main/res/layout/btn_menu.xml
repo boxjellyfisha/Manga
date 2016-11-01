@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/new_white"
+        android:id="@+id/menu_background" />
+
+    <Button
+        android:text="@string/manga_other"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/other_btn"
+        android:background="@drawable/stripe_shape"
+        android:textColor="@android:color/background_light"
+        android:layout_marginStart="80dp"
+        android:layout_above="@+id/animate_btn"
+        android:layout_marginBottom="70dp"
+        android:layout_gravity="bottom" />
+
+    <Button
+        android:text="@string/manga_btn"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/manga_btn"
+        android:background="@drawable/stripe_shape"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="130dp"
+        android:layout_above="@+id/other_btn"
+        android:layout_marginStart="40dp"
+        android:layout_gravity="bottom" />
+
+    <Button
+        android:text="@string/animate_btn"
+        android:layout_width="@dimen/menu_button_width"
+        android:layout_height="wrap_content"
+        android:id="@+id/animate_btn"
+        android:background="@drawable/stripe_shape"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="120dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp" />
+    <Button
+        android:layout_height="@dimen/menu_width"
+        android:id="@+id/menu_button"
+        android:background="@drawable/dia_stay"
+        android:textColor="@android:color/background_light"
+        android:elevation="4dp"
+        android:rotation="45.0"
+        android:layout_alignParentBottom="true"
+        android:layout_width="@dimen/menu_width"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="20dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:srcCompat="@drawable/dia_black"
+        android:id="@+id/mu_b"
+        android:rotation="45"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_gravity="bottom|left" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:srcCompat="@drawable/dia_black"
+        android:id="@+id/mu_c"
+        android:rotation="45"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="73dp"
+        android:layout_gravity="bottom|left" />
+
+    <TextView
+        android:text="返回"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mu_a"
+        android:layout_gravity="bottom|left"
+        android:textSize="12sp"
+        android:textColor="#a9a6af"
+        android:cursorVisible="false"
+        android:layout_marginLeft="33dp"
+        android:layout_marginBottom="38dp" />
+
+
+</FrameLayout>

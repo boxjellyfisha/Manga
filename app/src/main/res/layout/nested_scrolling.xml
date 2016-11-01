@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.deer.manga.Chose.ChoseActivity"
+    tools:showIn="@layout/chose_activity_scrolling"
+    tools:ignore="PrivateResource"
+    android:scrollX="0dp"
+    android:scrollY="0dp"
+    app:layout_anchor="@id/app_bar"
+    app:layout_anchorGravity="bottom">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/intro_fragment"
+        android:layout_gravity="top">
+
+        <Button
+            android:text="故事簡介"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/story_intro"
+            android:textSize="24sp"
+            android:layout_marginStart="50dp"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/intro_text"
+            android:text="@string/large_text"
+            android:paddingLeft="@dimen/text_padding"
+            android:paddingRight="@dimen/text_padding" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo_1"
+            android:id="@+id/leastButton"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            tools:ignore="ContentDescription" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chapterView"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

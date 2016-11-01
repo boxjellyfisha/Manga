@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">不機嫌なモノノケ庵</string>
+    <string name="large_text">
+        "   蘆屋因為被妖怪附身，因此進入高中就讀後，已經整整七天都是在學校保健室渡過。為了設法解決問題，蘆屋向兩坪大的茶室「妖怪庵」之主求助－－於是，解救在種種緣由下誤入現世的妖怪們并帶其回隱世，不愉快的妖怪庵奇譚第１集登場！"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="manga_btn">漫畫正篇</string>
+    <string name="manga_other">漫畫番外</string>
+    <string name="animate_btn">動畫消息</string>
+    <string name="story_name">故事簡介</string>
+</resources>
